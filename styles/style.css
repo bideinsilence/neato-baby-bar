@@ -1,305 +1,310 @@
 /* Custom properties */
 
 :root {
-  --baby-red: #e81c4f;
-  --off-black: #111111;
-  --off-white: #eeeeee;
+    --baby-red: #e81c4f;
+    --off-black: #111111;
+    --off-white: #eeeeee;
 }
 
 
 /* Base set */
 
 html {
-  box-sizing: border-box;
-  /* Using viewport relative units and calc() for responsiveness; 
-   * 1rem part ensures font-size never drops below the default value. */
-  font-size: calc(1rem + 0.3vw);
-  font-size: clamp(1rem, calc(1rem + 0.3vw), 2rem);
-  line-height: 1.75rem;
-  padding: 1vh 1vw 5vh 1vw;
-  scroll-behavior: smooth;
+    box-sizing: border-box;
+    /* Using viewport relative units and calc() for responsiveness; 
+     * 1rem part ensures font-size never drops below the default value. */
+font-size: calc(1rem + 0.3vw);
+font-size: clamp(1rem, calc(1rem + 0.3vw), 2rem);
+line-height: 1.75rem;
+padding: 1vh 1vw 5vh 1vw;
+scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 
 /* General Styling */
 
 body {
-  background-color: black;
-  background-color: var(--off-black);
-  color: white;
-  color: var(--off-white);
-  font-family: "Helvetica", "Arial", sans-serif;
-  margin: 0;
+    background-color: black;
+    background-color: var(--off-black);
+    color: white;
+    color: var(--off-white);
+    font-family: "Helvetica", "Arial", sans-serif;
+    margin: 0;
 }
 
 main {
-  /* "Readable range" is ~ 50-80. */
-  margin: 0 auto;
-  max-width: 70ch;
-  padding: 0 1.5rem;
+    /* "Readable range" is ~ 50-80. */
+    margin: 0 auto;
+    max-width: 70ch;
+    padding: 0 1.5rem;
 }
 
 
 h1 {
-  font-size: 2.25em;
-  line-height: 1.5em;
+    font-size: 2.25em;
+    line-height: 1.5em;
 }
 
 h1,
 h2,
 h3,
 strong {
-  color: white;
-  text-align: center;
+    color: white;
+    text-align: center;
 }
 
 img, iframe {
-  display: block;
-  max-width: 100%;
-  margin: 2rem auto;
+    display: block;
+    max-width: 100%;
+    margin: 2rem auto;
 }
 
 p + img {
-  padding-top: 1rem;
+    padding-top: 1rem;
 }
 
 ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 a {
-  color: white;
-  color: var(--off-white);
-  font-family: 'Andale Mono', monospace;
-  text-decoration: none;
+    color: white;
+    color: var(--off-white);
+    font-family: 'Andale Mono', monospace;
+    text-decoration: none;
 }
 
 a:hover {
-  color: crimson;
-  color: var(--baby-red);
+    color: crimson;
+    color: var(--baby-red);
 }
 
 address {
-  font-style: normal;
+    font-style: normal;
 }
 
 section {
-  padding-top: 2rem;
+    padding-top: 2rem;
 }
 
 
 /* Utility classes */
 
 .center-text {
-  text-align: center;
+    text-align: center;
 }
 
 .grid {
-  display: grid;
-  gap: 1em;
-  grid-gap: 1em;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    display: grid;
+    gap: 1em;
+    grid-gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
 }
 
 .mono {
-  font-family: 'Andale Mono', monospace;
-  font-size: 1.25rem;
+    font-family: 'Andale Mono', monospace;
+    font-size: 1.25rem;
 }
 
 .top-gap {
-  margin-top: 2rem;
+    margin-top: 2rem;
 }
 
 .top-space {
-  margin-top: 4rem;
+    margin-top: 4rem;
 }
 
 /* Navigation */
 
 nav {
-  border-bottom: 1px solid var(--baby-red);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+    border-bottom: 1px solid var(--baby-red);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .logo-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .logo-links a {
-  padding: 0.5rem;
+    padding: 0.5rem;
 }
 
 .logo-links img {
-  border-radius: 2px;
-  height: 3rem;
-  margin: 0;
+    border-radius: 2px;
+    height: 3rem;
+    margin: 0;
 }
 
 .logo-links img:hover {
-  border: 1px solid var(--baby-red);
+    border: 1px solid var(--baby-red);
 }
 
 .text-links {
-  font-size: 1.25rem;
-  line-height: 2rem;
-  margin: 0;
-  width: 100%;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    margin: 0;
+    width: 100%;
 }
 
 .text-links li {
-  border-top: 1px solid var(--baby-red);
-  padding: 0.3rem 0.5rem;
+    border-top: 1px solid var(--baby-red);
+    padding: 0.3rem 0.5rem;
 }
 
 
 /* Menu and social sections */
 
 button {
-  border-radius: 5px;
-  cursor: pointer;
-  display: block;
-  font-size: 1.3rem;
-  margin: 3rem auto 0 auto;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    font-size: 1.3rem;
+    margin: 3rem auto 0 auto;
+}
+
+button:focus,
+button:hover {
+    background-color: var(--baby-red);
 }
 
 dl dt {
-  padding: 0.5rem;
-  font-weight: bold;
+    padding: 0.5rem;
+    font-weight: bold;
 }
 
 dd,
 #menu ul li {
-  margin: 0;
-  text-align: center;
-  text-transform: uppercase;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .print-show {
-  display: none;
+    display: none;
 }
 
 .social-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .social-links li {
-  padding: 0.5rem;
+    padding: 0.5rem;
 }
 
 .icon {
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  background-size: 1.2em 1.2em;
-  display: inline-block;
-  padding-left: 2em;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 1.2em 1.2em;
+    display: inline-block;
+    padding-left: 2em;
 }
 
 .face {
-  background-image: url("../images/facebook.png");
+    background-image: url("../images/facebook.png");
 }
 
 .insta {
-  background-image: url("../images/instagram.png");
+    background-image: url("../images/instagram.png");
 }
 
 .at {
-  background-image: url("../images/at.png");
+    background-image: url("../images/at.png");
 }
 
 .top {
-  font-weight: bold;
-  margin-top: 3em;
-  text-align: center;
+    font-weight: bold;
+    margin-top: 3em;
+    text-align: center;
 }
 
 
 /* Responsive media conditions (mobile first) */
 
 @media (min-width: 26rem) {
-  h1 {
-    margin-top: 4rem;
-  }
-  .text-links {
-    align-items: center;
-    display: flex;
-    width: unset;
-  }
-  .text-links li {
-    border-top: none;
-  }
+    h1 {
+        margin-top: 4rem;
+    }
+    .text-links {
+        align-items: center;
+        display: flex;
+        width: unset;
+    }
+    .text-links li {
+        border-top: none;
+    }
 }
 
 @media (min-width: 43em) {
-  nav {
-    justify-content: space-between;
-  }  
-  .logo-links,
-  .text-links {
-    margin: 0 0.5rem;
-  }
+    nav {
+        justify-content: space-between;
+    }  
+    .logo-links,
+    .text-links {
+        margin: 0 0.5rem;
+    }
 }
 
 @media (min-width: 64em) {
-  h1 {
-    margin-top: 5rem;
-  }
-  nav {
-    background-color: black;
-    background-color: var(--off-black);
-    justify-content: space-between;
-    left: 0;
-    padding-top: 1vh;
-    position: fixed;
-    top: 0;
-    width: 100vw;
-  }  
-  /* Padding at top of main = the height of the fixed nav-bar plus some
-   * additional clearance */
-  section {
+    h1 {
+        margin-top: 5rem;
+    }
+    nav {
+        background-color: black;
+        background-color: var(--off-black);
+        justify-content: space-between;
+        left: 0;
+        padding-top: 1vh;
+        position: fixed;
+        top: 0;
+        width: 100vw;
+    }  
+    /* Padding at top of main = the height of the fixed nav-bar plus some
+     * additional clearance */
+section {
     padding-top: 5rem;
-  }
+}
 }
 
 @media print {
-  body > *:not(main) {
-    display: none;
-  }
-  main > *:not(#menu){
-    display: none;
-  }
-  #menu > *:not(.menu-print) {
-    display: none;
-  }
-  body,
-  h2,
-  h3 {
-    color: black;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  html{
-    font-size: 10px;
-  }
-  main {
-    max-width: 80%; 
-  }
-  .print-hide {
-    display: none;
-  }
-  .print-show {
-    display: revert;
-  }
+    body > *:not(main) {
+        display: none;
+    }
+    main > *:not(#menu){
+        display: none;
+    }
+    #menu > *:not(.menu-print) {
+        display: none;
+    }
+    body,
+    h2,
+    h3 {
+        color: black;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    html{
+        font-size: 10px;
+    }
+    main {
+        max-width: 80%; 
+    }
+    .print-hide {
+        display: none;
+    }
+    .print-show {
+        display: revert;
+    }
 }
 
