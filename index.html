@@ -52,8 +52,11 @@
   
     <!-- end navigation -->
 
+    <!-- Mavo app -->
+    <main mv-app="neatoBaby"
+          mv-plugins="dropbox"
+          mv-storage="https://www.dropbox.com/s/37f6u13uanwfbxk/neatobaby.json?dl=0">
 
-    <main mv-app="special" mv-storage="https://github.com/bideinsilence">
 
         <!-- welcome -->
 
@@ -66,7 +69,8 @@
                         827 W 1st Ave, Spokane, WA 99201
                     </a>
                 </p>
-                <p class="top-space">
+                <!-- Mavo property attribute for editable element -->
+                <p class="top-space" property="hours">
                     Monday through Thursday: 11AM to 1AM, Friday and Saturday: 11AM to 
                     2AM, Sunday: Neato closed, bar open at 5PM.
                 </p>
@@ -112,11 +116,12 @@
                 <h3 class="top-space">Special</h3>
                 <dl class="center-text grid">
                     <div>
+                        <!-- Mavo property attributes for editable elements -->
                         <dt property="specialName">Special Food Name</dt>
-                        <dd property="ingredients">
+                        <dd property="specialIngredients">
                             ingredients, of, special, food, etc...
                         </dd>
-                        <dd property="price">
+                        <dd property="specialPrice">
                             price
                         </dd>
                     </div>
@@ -223,14 +228,34 @@
                     <div>
                         <h3>All prices inlcude tax</h3>
                         <ul>
-                            <li>Vegan &nbsp; $10</li>
-                            <li>Veggie $&nbsp; 11</li>
-                            <li>Tofu $&nbsp; 12</li>
-                            <li>Chicken $&nbsp; 13</li>
-                            <li>Pork $&nbsp; 12</li>
-                            <li>Nachos $&nbsp; 12</li>
-                            <li>Vegan Nachos $&nbsp; 11</li>
-                            <li>Side of Guacamole $&nbsp; 3</li>
+                            <!-- Mavo property attributes for editable elements -->
+                            <li property="priceVegan">
+                                Vegan &nbsp; $11
+                            </li>
+                            <li property="priceVeggie">
+                                Veggie &nbsp; $12
+                            </li>
+                            <li property="priceTofu">
+                                Tofu &nbsp; $13
+                            </li>
+                            <li property="priceChicken">
+                                Chicken &nbsp; $14
+                            </li>
+                            <li property="pricePork">
+                                Pork &nbsp; $13
+                            </li>
+                            <li property="priceSteak">
+                                Steak &nbsp; $15
+                            </li>
+                            <li property="priceNachosQuesadillas">
+                                Nachos and Quesadillas &nbsp; + $1
+                            </li>
+                            <li property="priceVeganNachos">
+                                Vegan Nachos &nbsp; $12 + $1 tofu
+                            </li>
+                            <li property="priceGuacamole">
+                                Side of Guacamole &nbsp; $3
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -270,9 +295,6 @@
                  src="images/broken-mic-m.jpg"
                  alt="Event poster: iron goat talking into a microphone">
             <h3>Broken Mic</h3>
-            <!-- For when Guffaw returns -->
-
-            <!--
                 <img srcset="images/guffaw-pig-m.jpg 480w,
                 images/guffaw-pig.jpg 960w"
                 sizes="(min-width: 32em) 960px,
@@ -280,9 +302,7 @@
                 src="images/guffaw-pig-m.jpg"
                 alt="Large hairy pig with mouth open">
 
-                <h3>Guffaw Yourself</h3>
-            -->
-
+            <h3>Guffaw Yourself</h3>
             <img srcset="images/fun-ladies-m.jpg 320w,
                          images/fun-ladies.jpg 640w"
                  sizes="(min-width: 21em) 640px,
@@ -291,6 +311,13 @@
                  alt="Patty and Tim wailing into their microphones while Tim plays
                       guitar">
             <h3>Live Music</h3>
+            <p class="center-text">Upcoming Shows:</p>
+            <!-- Mavo collection and editable elements -->
+            <dl mv-multiple="show">
+                <dt><img property="showImage" src=""></dt>
+                <dt class="center-text" property="showName">Name of show</dt>
+                <dd property="showDescription">Show details</dd>
+            </dl>
 
             <!-- If they decide to share their Google Calendar for events -->
 
@@ -350,12 +377,16 @@
                         Instagram
                     </a>
                 </li>
+
+                <!-- Facebook
                 <li>
                     <a href="https://www.facebook.com/Neato-Burrito-115509695145435/"
                        class="icon face">
                         Facebook
                     </a>
                 </li>
+                -->
+
                 <li>
                     <a href="mailto:#@gmail.com"
                        class="icon at">
@@ -364,17 +395,16 @@
                 </li>
             </ul>
             <p class="center-text top-space">
-                *Inquiring bands - Please send us an email with the subject header:
+                *Inquiring bands - Please send us an email addressed to Patty
+                Tully.
             </p>
-            <div class="center-text">
-                Attention: J. Galinski
-            </div>
         </section>
 
         <!-- end social -->
 
         <div class="top"><a href="#top">Back to Top</a></div>
-        <div class="mv-bar">
+        <!-- Mavo toolbar -->
+        <div class="mv-bar mv-ui"></div>
     </main>
     <script src="scripts/print.js"></script>
 </body>

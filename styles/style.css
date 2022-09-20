@@ -167,7 +167,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     display: block;
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin: 3rem auto 0 auto;
 }
 
@@ -224,7 +224,7 @@ dd,
 
 .top {
     font-weight: bold;
-    margin-top: 3em;
+    margin: 3rem 0;
     text-align: center;
 }
 
