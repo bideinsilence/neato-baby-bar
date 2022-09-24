@@ -1,5 +1,4 @@
-
-let printButton = document.querySelector("button");
+let printButton = document.querySelector("#printButton");
 
 function printPage() { window.print(); }
 

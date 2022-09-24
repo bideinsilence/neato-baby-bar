@@ -163,6 +163,7 @@ nav {
 
 /* Menu and social sections */
 
+/* For print button and Mavo collections buttons */
 button {
     border-radius: 5px;
     cursor: pointer;
@@ -188,6 +189,11 @@ dd,
     text-transform: uppercase;
 }
 
+/* For mavo collections */
+[mv-multiple] {
+    position: static;
+}
+
 .print-show {
     display: none;
 }
@@ -200,6 +206,10 @@ dd,
 
 .social-links li {
     padding: 0.5rem;
+}
+
+.special {
+    margin-top: 2rem;
 }
 
 .icon {
@@ -271,11 +281,13 @@ dd,
     }  
     /* Padding at top of main = the height of the fixed nav-bar plus some
      * additional clearance */
-section {
-    padding-top: 5rem;
-}
+    section {
+        padding-top: 5rem;
+    }
 }
 
+/* For menu print button */
+/* 
 @media print {
     body > *:not(main) {
         display: none;
@@ -304,7 +316,8 @@ section {
         display: none;
     }
     .print-show {
-        display: revert;
+        display: block;
     }
 }
+*/
 

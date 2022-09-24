@@ -6,9 +6,11 @@
         <title>Neato Burrito and the Baby Bar</title>
         <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
         <link href="styles/style.css" rel="stylesheet">
-        <!-- for Mavo editor, mavo.io -->
-        <script src="https://get.mavo.io/stable/mavo.min.js"></script>
-        <link rel="stylesheet" href="https://get.mavo.io/stable/mavo.min.css">
+        <!-- For Mavo editor, mavo.io -->
+        <script src="https://get.mavo.io/mavo.min.js"></script>
+        <link rel="stylesheet" href="https://get.mavo.io/mavo.min.css">
+        <!-- End Mavo -->
+        <link href="styles/style.css" rel="stylesheet">
     </head>
 <body>
 <!--
@@ -112,8 +114,11 @@
                  alt="The beginning of the food menu on the back wall at Neato">
             <article class="menu-print">
                 <h2 class="print-show">Neato Burrito</h2>
+                <address class="center-text print-show">
+                    827 W 1st Ave, Spokane, WA 99201
+                </address>
                 <h2 class="print-hide">Menu</h2>
-                <h3 class="top-space">Special</h3>
+                <h3 class="special">Special</h3>
                 <dl class="center-text grid">
                     <div>
                         <!-- Mavo property attributes for editable elements -->
@@ -209,7 +214,7 @@
                     <div>
                         <dt>Nachos</dt>
                         <dd>
-                            meant, beans, salsa, sour cream, onions, cilantro, tomato
+                            meat, beans, salsa, sour cream, onions, cilantro, tomato
                         </dd>
                     </div>
                 </dl>
@@ -226,7 +231,7 @@
                         <h3>We have Queso</h3>
                     </div>
                     <div>
-                        <h3>All prices inlcude tax</h3>
+                        <h3>All prices include tax</h3>
                         <ul>
                             <!-- Mavo property attributes for editable elements -->
                             <li property="priceVegan">
@@ -259,11 +264,12 @@
                         </ul>
                     </div>
                 </div>
-                <address class="center-text print-show top-space">
-                    827 W 1st Ave, Spokane, WA 99201
-                </address>
             </article>
-            <button>Print Menu</button>
+            <!-- Menu PDF download anchor -->
+            <!-- Menu print button -->
+            <!--
+            <button id="printButton">Print Menu</button>
+            -->
         </section>
 
         <!-- end menu -->
@@ -313,11 +319,13 @@
             <h3>Live Music</h3>
             <p class="center-text">Upcoming Shows:</p>
             <!-- Mavo collection and editable elements -->
-            <dl mv-multiple="show">
-                <dt><img property="showImage" src=""></dt>
-                <dt class="center-text" property="showName">Name of show</dt>
-                <dd property="showDescription">Show details</dd>
-            </dl>
+            <div mv-list>
+                <dl mv-list-item="show">
+                    <dt><img property="showImage" src=""></dt>
+                    <dt class="center-text" property="showName">Name of show</dt>
+                    <dd property="showDescription">Show details</dd>
+                </dl>
+            </div>
 
             <!-- If they decide to share their Google Calendar for events -->
 
@@ -333,6 +341,7 @@
                 src="images/calendar-m.png"
                 alt="Neato and Baby Google calendar">
             -->
+
             <!--
                 <iframe
                 src="https://calendar.google.com/calendar/embed?src=g1eh1lfc2utlj0piarfa3gpgq0%40group.calendar.google.com&ctz=America%2FLos_Angeles"
@@ -378,7 +387,8 @@
                     </a>
                 </li>
 
-                <!-- Facebook
+                <!-- Facebook -->
+                <!--
                 <li>
                     <a href="https://www.facebook.com/Neato-Burrito-115509695145435/"
                        class="icon face">
@@ -388,7 +398,7 @@
                 -->
 
                 <li>
-                    <a href="mailto:#@gmail.com"
+                    <a href="mailto:babybar72@gmail.com"
                        class="icon at">
                         Send an email
                     </a>
@@ -406,6 +416,10 @@
         <!-- Mavo toolbar -->
         <div class="mv-bar mv-ui"></div>
     </main>
+    <script src="scripts/main.js"></script>
+    <!-- Script for print button -->
+    <!--
     <script src="scripts/print.js"></script>
+    -->
 </body>
 </html>
