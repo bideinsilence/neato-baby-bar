@@ -126,6 +126,8 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    /* To stay ontop of/over mavo collections */
+    z-index: 1000000;
 }
 
 .logo-links {
@@ -187,11 +189,6 @@ dd,
     margin: 0;
     text-align: center;
     text-transform: uppercase;
-}
-
-/* For mavo collections */
-[mv-multiple] {
-    position: static;
 }
 
 .print-show {
