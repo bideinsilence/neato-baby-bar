@@ -191,6 +191,14 @@ dd,
     text-transform: uppercase;
 }
 
+.menu-download {
+    font-size: 1.3rem;
+    margin-top: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
 .print-show {
     display: none;
 }

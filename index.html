@@ -5,10 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Neato Burrito and the Baby Bar</title>
         <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
-        <link href="styles/style.css" rel="stylesheet">
         <!-- For Mavo editor, mavo.io -->
-        <script src="https://get.mavo.io/mavo.min.js"></script>
-        <link rel="stylesheet" href="https://get.mavo.io/mavo.min.css">
+        <script src="https://get.mavo.io/stable/mavo.min.js"></script>
+        <link rel="stylesheet" href="https://get.mavo.io/stable/mavo.min.css">
         <!-- End Mavo -->
         <link href="styles/style.css" rel="stylesheet">
     </head>
@@ -266,6 +265,9 @@
                 </div>
             </article>
             <!-- Menu PDF download anchor -->
+            <div class="menu-download" >
+                <a href="Neato_Menu.pdf">print or download</a>
+            </div>
             <!-- Menu print button -->
             <!--
             <button id="printButton">Print Menu</button>
@@ -319,6 +321,9 @@
             <h3>Live Music</h3>
             <p class="center-text">Upcoming Shows:</p>
             <!-- Mavo collection and editable elements -->
+            <!-- Starting from v0.3.0, mv-list/mv-list-item, to create a
+            collection: -->
+            <!--
             <div mv-list>
                 <dl mv-list-item="show">
                     <dt><img property="showImage" src=""></dt>
@@ -326,6 +331,16 @@
                     <dd property="showDescription">Show details</dd>
                 </dl>
             </div>
+            -->
+            <!-- The mv-multiple attribute (v0.2.4-, current stable version) -->
+            <div mv-multiple="show">
+                <dl>
+                    <dt><img property="showImage" src=""></dt>
+                    <dt class="center-text" property="showName">Name of show</dt>
+                    <dd property="showDescription">Show details</dd>
+                </dl>
+            </div>
+
 
             <!-- If they decide to share their Google Calendar for events -->
 
